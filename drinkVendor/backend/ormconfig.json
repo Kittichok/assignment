@@ -1,6 +1,6 @@
 {
   "type": "sqlite",
-  "database": ":memory:",
+  "database": "testdb",
   "synchronize": true,
   "logging": false,
   "entities": ["src/entity/**/*.ts"],
