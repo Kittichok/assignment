@@ -1,0 +1,25 @@
+{
+  "name": "drinkvendor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "typeorm": "0.2.34",
+    "reflect-metadata": "^0.1.10",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333",
+    "@types/node": "^8.0.29"
+  }
+}
