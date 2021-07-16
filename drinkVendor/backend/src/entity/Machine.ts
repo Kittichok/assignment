@@ -10,5 +10,5 @@ export class Machine {
     name: string;
     
     @Column()
-    locacationName: string;
+    locationName: string;
 }

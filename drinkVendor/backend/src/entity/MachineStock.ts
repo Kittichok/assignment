@@ -1,4 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
+import { Machine } from "./Machine";
+import { Product } from "./Product";
 
 @Entity()
 export class MachineStock {
@@ -6,11 +8,13 @@ export class MachineStock {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
-    machineId: number;
+    @OneToOne(() => Machine)
+    @JoinColumn()
+    machine: Machine;
   
-    @Column()
-    productId: number;
+    @OneToOne(() => Product)
+    @JoinColumn()
+    product: Product;
     
     @Column()
     stock: number;

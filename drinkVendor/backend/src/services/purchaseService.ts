@@ -1,6 +1,7 @@
 import * as Koa from 'koa';
 import { getConnection } from "typeorm";
 import { MachineStock } from '../entity/MachineStock';
+import * as notifyService from './notifyService';
 
 const buy = async (ctx: Koa.ParameterizedContext) => {
   const body = ctx.request.body as Record<string, any>;
@@ -24,8 +25,8 @@ const buy = async (ctx: Koa.ParameterizedContext) => {
   const alert = instock < 10
 
   if (alert) {
-    // notify()
-    console.log('alert')
+    const message = `Product ${productId} in Machine ${machineId} less than 10`
+    notifyService.line(message)
   }
 
   await getConnection()

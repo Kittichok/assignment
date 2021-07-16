@@ -9,8 +9,8 @@ export class seedMachine1626247865989 implements MigrationInterface {
             .insert()
             .into("Machine")
             .values([
-                { name: "Machine A", locacationName: "location A" },
-                { name: "Machine B", locacationName: "location B"  },
+                { name: "Machine A", locationName: "location A" },
+                { name: "Machine B", locationName: "location B"  },
             ])
             .execute()
     }

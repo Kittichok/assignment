@@ -26,7 +26,7 @@ export class seedMachinestock1626248011570 implements MigrationInterface {
             .insert()
             .into(MachineStock)
             .values([
-                { machineId: machine.id, productId: product.id, stock: 11 },
+                { machine: machine, product: product, stock: 11 },
             ])
             .execute()
     }
